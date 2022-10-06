@@ -9,12 +9,28 @@
       "id": 1
     },
     {
-      "pet": "Pupuchi",
-      "owner": "Kelly",
+      "pet": "laksjd",
+      "owner": "klajdslkj",
       "email": "maximopeoficiales@gmail.com",
-      "date": "Pupuchi",
-      "symptom": "test2",
+      "date": "laksjd",
+      "symptom": "alkjlkasjd",
       "id": 2
+    },
+    {
+      "pet": "tes t finl",
+      "owner": "laksdjlkj",
+      "email": "maximopeoficiales@gmail.com",
+      "date": "tes t finl",
+      "symptom": "alksjdlkadjs",
+      "id": 3
+    },
+    {
+      "pet": "<script>   console.log(\"hola bro esto es una inyeccion de script\"); </script>",
+      "owner": "lkajsdlkj",
+      "email": "polaq@gmail.com",
+      "date": "<script>   console.log(\"hola bro esto es una inyeccion de script\"); </script>",
+      "symptom": "lkajslkdj",
+      "id": 4
     }
   ]
 }

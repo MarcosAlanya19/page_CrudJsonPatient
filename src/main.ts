@@ -9,7 +9,7 @@ const $Form = $<HTMLFormElement>('#form');
 $Form.addEventListener('submit', validateForm)
 document.addEventListener('DOMContentLoaded', showPatient)
 
-function validateForm(e: Event){
+async function validateForm(e: Event) {
   e.preventDefault();
 
   const inputForm: typeForm = {
@@ -20,20 +20,24 @@ function validateForm(e: Event){
     symptom: $<HTMLInputElement>('#symptom').value,
   }
 
-  if(validate(inputForm)){
+  if (validate(inputForm)) {
     showAlert()
-  }else{
-    postPatient(inputForm)
+  } else {
+    await postPatient(inputForm)
     $Form.reset();
+    await showPatient();
   }
 }
 
-async function showPatient(){
+async function showPatient() {
 
   const formJson = await getPatient()
-  
+  console.log(formJson);
+
+  $<HTMLSelectElement>('#cardPatient').innerHTML = "";
   formJson.forEach((obj: typeForm) => {
-    const {date, email, owner, pet, symptom, id} = obj
+
+    const { date, email, owner, pet, symptom, id } = obj
 
     const row = document.createElement('section');
     row.classList.add('card', 'm-3', 'bg-white', 'shadow-md', 'px-5', 'py-10', 'rounded-md')
