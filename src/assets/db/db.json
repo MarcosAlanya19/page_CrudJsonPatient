@@ -1,0 +1,20 @@
+{
+  "patient": [
+    {
+      "pet": "Nala",
+      "owner": "Marcos",
+      "email": "marcosalanya19@gmail.com",
+      "date": "Nala",
+      "symptom": "test1",
+      "id": 1
+    },
+    {
+      "pet": "Pupuchi",
+      "owner": "Kelly",
+      "email": "maximopeoficiales@gmail.com",
+      "date": "Pupuchi",
+      "symptom": "test2",
+      "id": 2
+    }
+  ]
+}
