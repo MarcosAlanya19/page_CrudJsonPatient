@@ -35,3 +35,26 @@ export const deletePatient = async (id: number) => {
     console.error(err);
   }
 }
+
+export const getIdPatient = async (id: number) => {
+  try {
+    const result = await fetch(`${url}/${id}`);
+    const patient = await result.json();
+    return (patient)
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+export const putPatient = async (obj: typeForm) => {
+  try {
+    await fetch(`${url}/${obj.id}`,{
+      method: 'PUT',
+      body: JSON.stringify(obj),
+      headers: {'Content-Type': 'application/json'}
+    });
+  } catch (err) {
+    console.error(err);
+  }
+}
+

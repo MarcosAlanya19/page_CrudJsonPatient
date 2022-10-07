@@ -33,6 +33,7 @@
             <input id="pet" class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="text"
               placeholder="Nombre de la Marcota" />
           </div>
+
           <div class="mb-5">
             <label for="owner" class="block text-gray-700 uppercase font-bold">
               Owner name:
@@ -40,6 +41,7 @@
             <input id="owner" class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="text"
               placeholder="Nombre del Propietario" />
           </div>
+
           <div class="mb-5">
             <label for="email" class="block text-gray-700 uppercase font-bold">
               Email:
@@ -47,12 +49,14 @@
             <input id="email" class="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md" type="email"
               placeholder="Example@gmail.com" />
           </div>
+
           <div class="mb-5">
             <label for="date" class="block text-gray-700 uppercase font-bold">
               date:
             </label>
             <input id="date" class="border-2 w-full p-2 mt-2 rounded-md" type="date" />
           </div>
+
           <div class="mb-5">
             <label for="symptom" class="block text-gray-700 uppercase font-bold">
               Symptom:
@@ -60,9 +64,14 @@
             <textarea class="border-2 w-full p-2 mt-2 placeholder-gray-400  rounded-md" id="symptom"
               placeholder="Describe los sintomas"></textarea>
           </div>
+          
+          <input type="hidden" name="id" id="id" value="" />
+
           <input type="submit"
+            id="btnForm"
             class="bg-indigo-600 w-full rounded-md p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transition-all"
-            value="Agregar paciente" />
+            value="Add patient" />
+
         </form>
       </main>
 

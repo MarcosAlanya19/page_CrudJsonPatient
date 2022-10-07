@@ -4,5 +4,5 @@ export interface typeForm{
   email: string,
   date: string,
   symptom: string,
-  id?: number
+  id?: number | string
 }
