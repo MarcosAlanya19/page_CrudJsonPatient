@@ -25,3 +25,13 @@ export const getPatient = async () =>{
     console.error(err);
   }
 }
+
+export const deletePatient = async (id: number) => {
+  try {
+    await fetch(`${url}/${id}`,{
+      method: 'DELETE',
+    })
+  } catch (err) {
+    console.error(err);
+  }
+}

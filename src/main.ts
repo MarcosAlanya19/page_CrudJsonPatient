@@ -1,4 +1,4 @@
-import { getPatient, postPatient } from './assets/API/apiPatient';
+import { deletePatient, getPatient, postPatient } from './assets/API/apiPatient';
 import { $, showAlert, validate } from './assets/functions'
 import { typeForm } from './assets/interface';
 import './assets/style/tailwind.min.css'
@@ -8,6 +8,12 @@ const $Form = $<HTMLFormElement>('#form');
 
 $Form.addEventListener('submit', validateForm)
 document.addEventListener('DOMContentLoaded', showPatient)
+document.addEventListener('DOMContentLoaded', showPatient)
+$<HTMLSelectElement>('#cardPatient').addEventListener('click', deleteCard)
+
+type EventElement = Event & HTMLElement & {
+  target: HTMLElement
+};
 
 async function validateForm(e: Event) {
   e.preventDefault();
@@ -56,4 +62,18 @@ async function showPatient() {
     `
     $<HTMLSelectElement>('#cardPatient').appendChild(row)
   });
+}
+
+async function deleteCard(e: Event) {
+  const event = e as EventElement;
+  
+  if(event.target.classList.contains('delete')){
+    const dataId = parseInt(event.target.dataset.patient!)
+    const confirmed = confirm(`Are you sure you want to delete this patient?`);
+    if (confirmed) {
+      await deletePatient(dataId)
+      await showPatient()
+    }
+  }
+
 }
